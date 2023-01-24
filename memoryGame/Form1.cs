@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 
 namespace memoryGame
@@ -31,12 +32,23 @@ namespace memoryGame
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.BackgroundImage = Image.FromFile("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3pAZPs8CrgzCC8ukoXCJxjC4jCL991g6LIw1vqeau0_pv7B8f");
+            button1.BackgroundImage = Image.FromFile(@"image.png");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            int scoreP1 = 0;
+            label2.Text = $"PLayer1 : {scoreP1}";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            int scoreP2 = 0;
+            label3.Text = $"Player2 : {scoreP2}";
         }
     }
 }

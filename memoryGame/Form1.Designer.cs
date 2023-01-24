@@ -88,19 +88,22 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(34, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 78);
+            this.label2.Size = new System.Drawing.Size(300, 78);
             this.label2.TabIndex = 4;
-            this.label2.Text = "player 1";
+            this.label2.Text = "Player1 : 0";
+            this.label2.TextChanged += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(1611, 48);
+            this.label3.Location = new System.Drawing.Point(1550, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 78);
+            this.label3.Size = new System.Drawing.Size(300, 78);
             this.label3.TabIndex = 5;
-            this.label3.Text = "player 2";
+            this.label3.Text = "Player2 : 0";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button2
             // 
