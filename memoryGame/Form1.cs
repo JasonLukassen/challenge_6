@@ -39,11 +39,6 @@ namespace memoryGame
 
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -199,6 +194,17 @@ namespace memoryGame
         {
             button24.BackgroundImage = Image.FromFile(imageList[8]);
         }
-        
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            int score = 0;
+            label4.Text = $"{score}";
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            int score = 0;
+            label4.Text = $"{score}";
+        }
     }
 }
