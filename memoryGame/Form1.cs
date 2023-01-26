@@ -3,6 +3,7 @@ using System.Security.Policy;
 
 namespace memoryGame
 {
+
     public partial class Form1 : Form
     {
 
@@ -21,7 +22,9 @@ namespace memoryGame
                               @"C:\Users\jason\Source\Repos\JasonLukassen\challenge_6\memoryGame\images\imagePair12.png",
                               };
 
-        bool result;
+        string backOffImage = @"C:\Users\jason\source\repos\JasonLukassen\challenge_6\memoryGame\images.png";
+        int scoreP1 = 0;
+        int scoreP2 = 0;
 
         public Form1()
         {
@@ -46,165 +49,352 @@ namespace memoryGame
 
         private void label2_Click(object sender, EventArgs e)
         {
-            int scoreP1 = 0;
-            label2.Text = $"PLayer1 : {scoreP1}";
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            int scoreP2 = 0;
-            scoreP2++;
-            label3.Text = $"Player2 : {scoreP2}";
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.BackgroundImage = Image.FromFile(imageList[7]);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            button2.BackgroundImage = Image.FromFile(imageList[3]);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            button3.BackgroundImage = Image.FromFile(imageList[0]);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            button4.BackgroundImage = Image.FromFile(imageList[6]);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            button5.BackgroundImage = Image.FromFile(imageList[11]);
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            button6.BackgroundImage = Image.FromFile(imageList[9]);
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            button7.BackgroundImage = Image.FromFile(imageList[10]);
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            button8.BackgroundImage = Image.FromFile(imageList[5]);
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            button9.BackgroundImage = Image.FromFile(imageList[7]);
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            button10.BackgroundImage = Image.FromFile(imageList[9]);
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            button11.BackgroundImage = Image.FromFile(imageList[6]);
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            button12.BackgroundImage = Image.FromFile(imageList[2]);
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            button13.BackgroundImage = Image.FromFile(imageList[1]);
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            button14.BackgroundImage = Image.FromFile(imageList[10]);
-
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            button15.BackgroundImage = Image.FromFile(imageList[11]);
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            button16.BackgroundImage = Image.FromFile(imageList[2]);
-
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            button17.BackgroundImage = Image.FromFile(imageList[1]);
-
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            button18.BackgroundImage = Image.FromFile(imageList[4]);
-
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            button19.BackgroundImage = Image.FromFile(imageList[4]);
-
-        }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-            button20.BackgroundImage = Image.FromFile(imageList[5]);
-
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            button21.BackgroundImage = Image.FromFile(imageList[3]);
-
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-            button22.BackgroundImage = Image.FromFile(imageList[8]);
-
-        }
-
-        private void button23_Click(object sender, EventArgs e)
-        {
-            button23.BackgroundImage = Image.FromFile(imageList[0]);
-
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-            button24.BackgroundImage = Image.FromFile(imageList[8]);
-        }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            int score = 0;
-            label4.Text = $"{score}";
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            int score = 0;
-            label4.Text = $"{score}";
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                checkBox1.BackgroundImage = Image.FromFile(imageList[7]);
+            }
+            else
+            {
+                checkBox1.BackgroundImage= Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox2.BackgroundImage = Image.FromFile(imageList[3]);
+            }
+            else
+            {
+                checkBox2.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                checkBox3.BackgroundImage = Image.FromFile(imageList[0]);
+            }
+            else
+            {
+                checkBox3.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                checkBox4.BackgroundImage = Image.FromFile(imageList[6]);
+            }
+            else
+            {
+                checkBox4.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                checkBox5.BackgroundImage = Image.FromFile(imageList[11]);
+            }
+            else
+            {
+                checkBox5.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked)
+            {
+                checkBox6.BackgroundImage = Image.FromFile(imageList[9]);
+            }
+            else
+            {
+                checkBox6.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked)
+            {
+                checkBox7.BackgroundImage = Image.FromFile(imageList[10]);
+            }
+            else
+            {
+                checkBox7.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked)
+            {
+                checkBox8.BackgroundImage = Image.FromFile(imageList[5]);
+            }
+            else
+            {
+                checkBox8.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked)
+            {
+                checkBox9.BackgroundImage = Image.FromFile(imageList[7]);
+            }
+            else
+            {
+                checkBox9.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked)
+            {
+                checkBox10.BackgroundImage = Image.FromFile(imageList[9]);
+            }
+            else
+            {
+                checkBox10.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox11.Checked)
+            {
+                checkBox11.BackgroundImage = Image.FromFile(imageList[6]);
+            }
+            else
+            {
+                checkBox11.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox12.Checked)
+            {
+                checkBox12.BackgroundImage = Image.FromFile(imageList[2]);
+            }
+            else
+            {
+                checkBox12.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox13_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox13.Checked)
+            {
+                checkBox13.BackgroundImage = Image.FromFile(imageList[1]);
+            }
+            else
+            {
+                checkBox13.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox14.Checked)
+            {
+                checkBox14.BackgroundImage = Image.FromFile(imageList[10]);
+            }
+            else
+            {
+                checkBox14.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox15.Checked)
+            {
+                checkBox15.BackgroundImage = Image.FromFile(imageList[11]);
+            }
+            else
+            {
+                checkBox15.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox16.Checked)
+            {
+                checkBox16.BackgroundImage = Image.FromFile(imageList[2]);
+            }
+            else
+            {
+                checkBox16.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox17_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox17.Checked)
+            {
+                checkBox17.BackgroundImage = Image.FromFile(imageList[1]);
+            }
+            else
+            {
+                checkBox17.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox18_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox18.Checked)
+            {
+                checkBox18.BackgroundImage = Image.FromFile(imageList[4]);
+            }
+            else
+            {
+                checkBox18.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox19_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox19.Checked)
+            {
+                checkBox19.BackgroundImage = Image.FromFile(imageList[4]);
+            }
+            else
+            {
+                checkBox19.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox20_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox20.Checked)
+            {
+                checkBox20.BackgroundImage = Image.FromFile(imageList[5]);
+            }
+            else
+            {
+                checkBox20.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox21_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox21.Checked)
+            {
+                checkBox21.BackgroundImage = Image.FromFile(imageList[3]);
+            }
+            else
+            {
+                checkBox21.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox22.Checked)
+            {
+                checkBox22.BackgroundImage = Image.FromFile(imageList[8]);
+            }
+            else
+            {
+                checkBox22.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox23_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox23.Checked)
+            {
+                checkBox23.BackgroundImage = Image.FromFile(imageList[0]);
+            }
+            else
+            {
+                checkBox23.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void checkBox24_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox24.Checked)
+            {
+                checkBox24.BackgroundImage = Image.FromFile(imageList[8]);
+            }
+            else
+            {
+                checkBox24.BackgroundImage = Image.FromFile(backOffImage);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            scoreP1++;
+            label4.Text = $"{scoreP1}";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            scoreP1--;
+            if (scoreP1 <= 0)
+            {
+                scoreP1 = 0;
+            }
+
+            label4.Text = $"{scoreP1}";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            scoreP2++;
+            label5.Text = $"{scoreP2}";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            scoreP2--;
+            if (scoreP2 <= 0)
+            {
+                scoreP2 = 0;
+            }
+
+            label5.Text = $"{scoreP2}";
+            
         }
     }
 }
