@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 
@@ -6,7 +7,6 @@ namespace memoryGame
 
     public partial class Form1 : Form
     {
-
 
         string[] imageList = {@"C:\Users\jason\Source\Repos\JasonLukassen\challenge_6\memoryGame\images\imagePair1.png",
                               @"C:\Users\jason\Source\Repos\JasonLukassen\challenge_6\memoryGame\images\imagePair2.png",
@@ -26,10 +26,13 @@ namespace memoryGame
         int scoreP1 = 0;
         int scoreP2 = 0;
 
+
         public Form1()
         {
             InitializeComponent();
         }
+
+
 
         private void Form1_Click(object sender, EventArgs e)
         {
@@ -66,7 +69,6 @@ namespace memoryGame
 
         private void label4_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void label5_Click_1(object sender, EventArgs e)
@@ -366,6 +368,13 @@ namespace memoryGame
         {
             scoreP1++;
             label4.Text = $"{scoreP1}";
+
+            if (scoreP1 + scoreP2 == 12)
+            {
+                panel1.Visible= true;
+                label7.Visible= true;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -383,6 +392,13 @@ namespace memoryGame
         {
             scoreP2++;
             label5.Text = $"{scoreP2}";
+
+            if (scoreP1 + scoreP2 == 12)
+            {
+                panel1.Visible = true;
+                label7.Visible = true;
+            }
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -395,6 +411,33 @@ namespace memoryGame
 
             label5.Text = $"{scoreP2}";
             
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            if (scoreP1 == scoreP2)
+            {
+                label7.Text = "It's a draw";
+                label7.Left = 850;
+            }
+            else if (scoreP1 > scoreP2)
+            {
+                label7.Text = "player 1 \nis the winner";
+                label7.Left = 850;
+            }
+            else
+            {
+                label7.Text = "player 2 \nis the winner";
+                label7.Left = 850;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            if(scoreP1 + scoreP2 == 12) 
+            {
+                Visible= true;
+            }
         }
     }
 }
